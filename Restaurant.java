@@ -5,7 +5,7 @@ public class Restaurant
     String name;
     String location;
     
-    public void register(int a,String b,String c)
+    Restaurant(int a,String b,String c)
     {
         id= a;
         name= b;
@@ -29,17 +29,18 @@ public class Restaurant
 public static void main(String args[])
 {
     var rating=3;
-    Restaurant[] rest = new Restaurant[4];
-    rest[0].register(1,"pistachio","S G Palya");
-    rest[1].register(2,"malabar cafe","S G Palya");
-    rest[2].register(3,"Chicking","Koramangala");
-    rest[3].register(4,"Kanur Food Point","S G Palya");
-    rest[4].register(5,"K F C","Forum Mall");
+    Restaurant[] rest = new Restaurant[5] ;
+    rest[0]=new Restaurant(1,"pistachio","S G Palya");
+    rest[1]=new Restaurant(2,"malabar cafe","S G Palya");
+    rest[2]=new Restaurant(3,"Chicking","Koramangala");
+    rest[3]=new Restaurant(4,"Kanur Food Point","S G Palya");
+    rest[4]=new Restaurant(5,"K F C","Forum Mall");
     for(int i=0;i<5;i++)
     {
-    rest[0].viewdetails();
+        rest[i].viewdetails();
     }
-    System.out.println("n\nRATING");
+    System.out.println("\nRATING for "+rest[0].name);
+
     rest[0].rating(rating);
 }
 }
